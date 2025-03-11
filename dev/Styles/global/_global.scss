@@ -1,0 +1,30 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+    /* Чтобы не появлялись отступы от шапки сверху и слева!!! */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.bold-text-not-title{
+    font-weight: 700; /*Устанавливает насыщенность шрифта*/
+    font-size: 12px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    line-height: 14.63px; /*Задаёт высоту строки текста*/
+}
+
+.max-width_100{
+    max-width: 100%;
+}
+
+.position_relative{
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,125 @@
+.body-landing{
+    padding-top: 70px;
+    height: 100%;
+    width: 100%;
+     /* При смене с height на max-height текст перестал выходить за изображение при уменьшении масштаба*/
+    background: url(../img/image_background_landing.png) center center; /*Установит фон элемента*/
+    background-position: center center;
+    background-size: cover;
+    object-fit: contain; /* Исключаем искажения пропорций */
+    display: flex;
+}
+
+.form-hotel-rooms{
+    padding-top: 70px;
+    padding-right: 530px;
+
+    &__rectangle-hotel-rooms{
+        width: 380px;
+        height: 374px;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0px 0px 25px 0px #0000001F;
+    }
+
+    &__content-space{
+        padding: 26px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__content-space > h2{
+        font-weight: 700; /*Устанавливает насыщенность шрифта*/
+        font-size: 24px; /*Определяет размер шрифта элемента*/
+        font-family: Montserrat, serif;
+        line-height: 29.26px; /*Задаёт высоту строки текста*/
+        color: #1F2041;
+        margin: auto;
+        padding-bottom: 20px;
+        padding-top: 14px;
+    }
+}
+
+
+.date-input{
+    &__width-height{
+        height: 38px;
+        width: 142px;
+    }
+
+    &__border-charact{
+        border-radius: 4px;
+        border-color:#1F204140;
+        border: 1px solid #1F204140;
+    }
+
+    &__text-charact{
+        line-height: 18px;
+        font-size: 14px; /*Определяет размер шрифта элемента*/
+        font-family: Montserrat, serif;
+        color: #1F2041BF;
+        text-align: left;
+        text-indent: 15px; /*Определяет размер отступа перед строкой в текстовом блоке */
+    }
+
+    &__outline-none{
+        outline: none;
+    }
+
+    &::placeholder{
+        color:#1F2041BF;
+    }
+
+    &__icon-for-in-out {
+        position: absolute;
+        top: 50%; /* Центрируем по вертикали */
+        right: 10px; /* Расстояние от правого края */
+    }
+}
+
+.arrival, .out {
+    position: relative;
+}
+
+
+.guests-label{
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    &__position-how-guests-dropdown{
+        height: 44px;
+        width: 320px;
+        padding-left: 0;
+        white-space: nowrap;
+    
+    }
+
+    &__icon-expand-more{
+        padding-left: 170px;
+    }
+}
+
+
+.full-button-search{
+    &__arrow-search{
+        padding-left: 67px;
+    }
+}
+
+
+/* Надпись снизу фона с диваном */
+
+.inscript-below-bg{
+    padding-top: 764px;
+    text-align: right;
+    padding-bottom: 18px;
+}
+
+.inscript-font_size-color-height{
+    line-height: 24px;
+    font-size: 14px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    color: #1F2041BF;
+    max-width: 260px;
+}

@@ -1,0 +1,211 @@
+@charset "UTF-8";
+.site-header {
+  width: 100%; /*Устанавливает ширину содержимого элемента*/
+  background-color: white; /*Определяет цвет фона элемента*/
+  height: 70px; /*Устанавливает высоту содержимого элемента*/
+  position: fixed;
+  display: block;
+  z-index: 1000; /* Это нужно для того, чтобы при прокрутке сайта, шапка всегда отображалась ПОВЕРХ всех элементов */
+}
+
+.menu-bar {
+  font-size: 14px; /*Определяет размер шрифта элемента*/
+  font-family: Montserrat, serif;
+  line-height: 17px; /*Задаёт высоту строки текста*/
+  text-decoration: none; /*Добавляет оформление текста*/
+  margin: 0 20px;
+  color: rgba(31, 32, 65, 0.5019607843);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  /* Чтобы не появлялись отступы от шапки сверху и слева!!! */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bold-text-not-title {
+  font-weight: 700; /*Устанавливает насыщенность шрифта*/
+  font-size: 12px; /*Определяет размер шрифта элемента*/
+  font-family: Montserrat, serif;
+  line-height: 14.63px; /*Задаёт высоту строки текста*/
+}
+
+.content-container {
+  max-width: 1400px; /*Устанавливает максимальную ширину элемента*/
+  min-width: 314px;
+  margin-left: auto; /*Устанавливает величину отступа от левого края элемента*/
+  margin-right: auto; /*Устанавливает величину отступа от правого края элемента*/
+  padding-left: 140px; /*Устанавливает значение поля от левого края содержимого элемента*/
+  padding-right: 140px; /*Устанавливает значение поля от правого края содержимого элемента*/
+}
+.content-container__navigation-container {
+  height: 70px; /*Устанавливает высоту содержимого элемента*/
+  display: flex; /*Определяет как элемент должен быть показан в документе*/
+  align-items: center; /*Выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении*/
+  justify-content: space-between; /*Как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера*/
+}
+.content-container_display_flex {
+  display: flex;
+}
+
+.body-landing {
+  padding-top: 70px;
+  height: 100%;
+  width: 100%;
+  /* При смене с height на max-height текст перестал выходить за изображение при уменьшении масштаба*/
+  background: url(/image_background_landing.f95aefc7.png) center center; /*Установит фон элемента*/
+  background-position: center center;
+  background-size: cover;
+  object-fit: contain; /* Исключаем искажения пропорций */
+  display: flex;
+}
+
+.form-hotel-rooms {
+  padding-top: 70px;
+  padding-right: 530px;
+}
+.form-hotel-rooms__rectangle-hotels-rooms {
+  width: 380px;
+  height: 1000px;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+.form-hotel-rooms__content-space {
+  padding: 26px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form-hotel-rooms__content-space > h2 {
+  font-weight: 700; /*Устанавливает насыщенность шрифта*/
+  font-size: 24px; /*Определяет размер шрифта элемента*/
+  font-family: Montserrat, serif;
+  line-height: 29.26px; /*Задаёт высоту строки текста*/
+  color: #1F2041;
+  margin: auto;
+  padding-bottom: 20px;
+  padding-top: 14px;
+}
+
+.date-input__width-height {
+  height: 38px;
+  width: 142px;
+}
+.date-input__border-charact {
+  border-radius: 4px;
+  border-color: rgba(31, 32, 65, 0.2509803922);
+  border: 1px solid rgba(31, 32, 65, 0.2509803922);
+}
+.date-input__text-charact {
+  line-height: 18px;
+  font-size: 14px; /*Определяет размер шрифта элемента*/
+  font-family: Montserrat, serif;
+  color: rgba(31, 32, 65, 0.7490196078);
+  text-align: left;
+  text-indent: 15px; /*Определяет размер отступа перед строкой в текстовом блоке */
+}
+.date-input__outline-none {
+  outline: none;
+}
+.date-input::placeholder {
+  color: rgba(31, 32, 65, 0.7490196078);
+}
+.date-input__icon-for-in-out {
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали */
+  right: 10px; /* Расстояние от правого края */
+}
+
+.arrival, .out {
+  position: relative;
+}
+
+.guests-label {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.guests-label__position-how-guests-dropdown {
+  height: 44px;
+  width: 320px;
+  padding-left: 0;
+  white-space: nowrap;
+}
+.guests-label__icon-expand-more {
+  padding-left: 170px;
+}
+
+.full-button-search__arrow-search {
+  padding-left: 67px;
+}
+
+/* Надпись снизу фона с диваном */
+.inscript-below-bg {
+  padding-top: 764px;
+  text-align: right;
+  padding-bottom: 18px;
+}
+
+.inscript-font_size-color-height {
+  line-height: 24px;
+  font-size: 14px; /*Определяет размер шрифта элемента*/
+  font-family: Montserrat, serif;
+  color: rgba(31, 32, 65, 0.7490196078);
+  max-width: 260px;
+}
+
+.button {
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  padding: 10px 20px; /* отступы внутри кнопки */
+  font-size: 12px;
+  line-height: 14.63px;
+  font-family: Montserrat, serif;
+}
+.button__margin-in-navbar {
+  margin: 0 20px;
+}
+.button_color-text_button-join {
+  color: #BC9CFF;
+}
+.button_border_gradient {
+  position: relative;
+}
+.button_border_gradient::before {
+  content: "";
+  position: absolute;
+  top: -2px; /*top left bottom и right - толщина обводки кнопки */
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: linear-gradient(#BC9CFF, #8BA4F9);
+  border-radius: 50px;
+  z-index: -1;
+}
+.button_bg_gradient {
+  background: linear-gradient(#BC9CFF, #8BA4F9);
+}
+.button__text-color_white {
+  color: white;
+}
+.button__search-hotels-rooms {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+.button_hover_transform {
+  transition: 0.5s;
+}
+.button_hover_transform:hover {
+  transform: scale(0.9);
+}
+
+.bg_white {
+  background-color: #FFFFFF;
+}

@@ -1,0 +1,22 @@
+extends main
+
+mixin button-menu-bar(className,text)
+    button(class=className)=text
+
+mixin link-menu-bar(link)
+    for i in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+        a(class="menu-bar" href=link)=i
+
+
+block header
+    header.site-header
+        article.content-container
+            article.content-container__navigation-container
+                article.logo
+                    img(src="../svg/Logo.svg")
+                nav.menu-bar
+                    +link-menu-bar('')
+
+                    +button-menu-bar('button button__margin-in-navbar button_color-text_button-join bg_white button_border_gradient', 'ВОЙТИ')
+                    +button-menu-bar('button button__margin-in-navbar button_text-color_white button_bg_gradient', 'ЗАРЕГИСТРИРОВАТЬСЯ')
+

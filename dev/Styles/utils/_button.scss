@@ -1,0 +1,62 @@
+.button{
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px; /* отступы внутри кнопки */
+    font-size: 12px;
+    line-height: 14.63px;
+    font-family: Montserrat, serif;
+
+    &__margin-in-navbar{
+        margin: 0 20px;
+    }
+
+    &_color-text_button-join{
+        color: #BC9CFF;
+    }
+
+    &_border_gradient{
+        position: relative;
+    
+        &::before{
+            content: "";
+            position: absolute;
+            top: -2px; /*top left bottom и right - толщина обводки кнопки */
+            left: -2px;
+            bottom: -2px;
+            right: -2px;
+            background: linear-gradient(#BC9CFF, #8BA4F9);
+            border-radius: 50px;
+            z-index: -1;
+        }
+    }
+
+    &_bg_gradient{
+        background: linear-gradient(#BC9CFF, #8BA4F9);
+    }
+
+    &_text-color_white{
+        color: white;
+    }
+
+    // Стили кнопки "Подобрать номер"
+    
+    &__search-hotel-rooms{
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        padding-left: 80px;
+    }
+
+    &_hover_transform{
+        transition: 0.5s;
+
+        &:hover{
+            transform: scale(0.9);
+        }
+    }
+}
+
+.bg_white{
+    background-color: #FFFFFF;
+}

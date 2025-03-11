@@ -1,0 +1,357 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+    /* Чтобы не появлялись отступы от шапки сверху и слева!!! */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.site-header {
+    width: 100%; /*Устанавливает ширину содержимого элемента*/
+    background-color: white; /*Определяет цвет фона элемента*/
+    height: 70px; /*Устанавливает высоту содержимого элемента*/
+    position: fixed;
+    display: block;
+    z-index: 1000; /* Это нужно для того, чтобы при прокрутке сайта, шапка всегда отображалась ПОВЕРХ всех элементов */
+}
+.content-container{
+    max-width: 1400px; /*Устанавливает максимальную ширину элемента*/
+    min-width: 314px;
+    margin-left: auto; /*Устанавливает величину отступа от левого края элемента*/
+    margin-right: auto; /*Устанавливает величину отступа от правого края элемента*/
+    padding-left: 140px; /*Устанавливает значение поля от левого края содержимого элемента*/
+    padding-right: 140px; /*Устанавливает значение поля от правого края содержимого элемента*/
+}
+  /*Шапка сайта*/
+  
+.content-container__navigation-container {
+    height: 70px; /*Устанавливает высоту содержимого элемента*/
+    display: flex; /*Определяет как элемент должен быть показан в документе*/
+    align-items: center; /*Выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении*/
+    justify-content: space-between; /*Как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера*/
+}
+
+  /*Навигационный контейнер*/
+  
+.menu-bar {
+    font-size: 14px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    line-height: 17px; /*Задаёт высоту строки текста*/
+    text-decoration: none; /*Добавляет оформление текста*/
+    margin: 0 20px;
+    color: #1F204180;
+}
+
+.button{
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px; /* отступы внутри кнопки */
+    font-size: 12px;
+    line-height: 14.63px;
+    font-family: Montserrat, serif;
+}
+
+.button__margin-in-navbar{
+    margin: 0 20px;
+}
+
+.button_color-text_button-join{
+    color: #BC9CFF;
+}
+
+
+.bg_white{
+    background-color: #FFFFFF;
+}
+/* Cвойство position очень важно для правильного отображения обводки кнопки*/
+
+.button_border_gradient{
+    position: relative;
+}
+.button_border_gradient::before{
+    content: "";
+    position: absolute;
+    top: -2px; /*top left bottom и right - толщина обводки кнопки */
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: linear-gradient(#BC9CFF, #8BA4F9);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.button_bg_gradient{
+    background: linear-gradient(#BC9CFF, #8BA4F9);
+}
+
+.button_text-color_white{
+    color: white;
+}
+
+
+
+
+/* Основная информация в лэндинге */
+
+
+/* Картинка на фоне */
+.body-landing{
+    padding-top: 70px;
+    height: 100%;
+    width: 100%;
+     /* При смене с height на max-height текст перестал выходить за изображение при уменьшении масштаба*/
+    background: url(/image_background_landing.f95aefc7.png) center center; /*Установит фон элемента*/
+    background-position: center center;
+    background-size: cover;
+    object-fit: contain; /* Исключаем искажения пропорций */
+    display: flex;
+}
+
+/* Позиционирование элементов на картинке с фоном */
+.content-container_display_flex{
+    display: flex;
+}
+
+
+/* Форма с номерами под пожелания клиента */
+.form-hotel-rooms{
+    padding-top: 70px;
+    padding-right: 530px;
+}
+.form-hotel-rooms__rectangle-hotel-rooms{
+    width: 380px;
+    height: 374px;
+    background: white;
+    border-radius: 4px;
+}
+
+/* Контент прямоугольника с пожеланиями по прибытию и выезду*/
+.form-hotel-rooms__content-space{
+    padding: 26px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Надпись "Найдем номера под ваши пожелания" */
+.form-hotel-rooms__content-space > h2{
+    font-weight: 700; /*Устанавливает насыщенность шрифта*/
+    font-size: 24px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    line-height: 29.26px; /*Задаёт высоту строки текста*/
+    color: #1F2041;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 14px;
+}
+
+.bold-text-not-title{
+    font-weight: 700; /*Устанавливает насыщенность шрифта*/
+    font-size: 12px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    line-height: 14.63px; /*Задаёт высоту строки текста*/
+}
+
+.date-input__width-height{
+    height: 38px;
+    width: 142px;
+}
+.date-input__border-charact{
+    border-radius: 4px;
+    border-color:#1F204140;
+    border: 1px solid #1F204140;
+}
+.date-input__text-charact{
+    line-height: 18px;
+    font-size: 14px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    color: #1F2041BF;
+    text-align: left;
+    text-indent: 15px; /*Определяет размер отступа перед строкой в текстовом блоке */
+}
+.date-input__outline-none{
+    outline: none;
+}
+
+.date-input::placeholder{
+    color:#1F2041BF;
+
+}
+/* Делает контейнер относительным для дочерних элементов */
+/* Нужно для того, чтобы иконку вставить внутрь инпута */
+.arrival, .out {
+    position: relative;
+  }
+
+.date-input__icon-for-in-out {
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    right: 10px; /* Расстояние от правого края */
+}
+
+/* Поле с надписью "Сколько гостей" */
+
+/* Отступ сверху и снизу */
+.guests-label{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.guests-label__position-how-guests-dropdown{
+    height: 44px;
+    width: 320px;
+    padding-left: 0;
+    white-space: nowrap;
+
+}
+
+.guests-label__icon-expand-more{
+    padding-left: 170px;
+}
+
+/* Кнопка "Подобрать номер" */
+
+.button__search-hotel-rooms{
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+.full-button-search__arrow-search{
+    padding-left: 67px;
+}
+
+.button_hover_transform{
+    transition: 0.5s;
+}
+.button_hover_transform:hover{
+    transform: scale(0.9);
+}
+
+/* Надпись снизу фона с диваном */
+
+.inscript-below-bg{
+    padding-top: 764px;
+    text-align: right;
+    padding-bottom: 18px;
+}
+
+.inscript-font_size-color-height{
+    line-height: 24px;
+    font-size: 14px; /*Определяет размер шрифта элемента*/
+    font-family: Montserrat, serif;
+    color: #1F2041BF;
+    max-width: 260px;
+}
+
+
+/* Footer widgets */
+
+.footer-widgets__all-footer-widgets{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    overflow-x: auto;
+}
+
+
+.footer-widgets__footer-nav{
+    display: grid;
+    grid-template-rows: auto auto;/* Задаем две строки, размер которых автоматически подстраивается под контент */
+}
+
+.max-width_100{
+    max-width: 100%;
+}
+
+
+/* Стили для каждого списка футера */
+
+.footer-widgets__footer-list{
+    list-style-type: none;
+    font-family: Montserrat, serif;
+    top: -10px;
+}
+
+.footer-widgets__footer-list > li{
+    padding-bottom: 20px;
+}
+
+.footer-widgets__head-footer-list-elem{
+    color: #1F2041;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 14.63px;
+}
+
+.footer-widgets__footer-list-elem{
+    color: #1F204180;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 17.07px;
+}
+
+/* Блок списка с заголовком ПОДПИСКА */
+
+.position_relative{
+    position: relative;
+}
+
+.input-send-email{
+    background: white;
+    border: 1px solid #1F204140;
+    border-radius: 4px;
+    padding: 0%;
+    /* Размер на 2px меньше из-за borderов */
+    height: 42px; 
+    width: 258px;
+    white-space: nowrap;
+}
+
+.input-send-email_position_absolute{
+    position: absolute;
+    top: 12px;
+    left: 230px;
+}
+
+.input-send-email::placeholder{
+    font-family: Montserrat, serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1F204140;
+    text-indent: 15px;
+}
+
+/* Footer */
+
+hr{
+    color: #1F204180;
+    margin-top: 100px;
+}
+
+.all-items-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.all-item-footer__text-copyright{
+    font-family: Montserrat, serif;
+    font-size: 14px;
+    line-height: 17.07px;
+    color: #1F2041BF;
+}
+
+.all-item-footer__icons-link{
+    display: flex;
+    gap: 20px;
+    margin: 0 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
